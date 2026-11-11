@@ -1,0 +1,309 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #080d0a;
+  color: #f2f7f3;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #101913;
+  border-bottom: 1px solid #24382a;
+}
+
+.logo {
+  color: #68e58c;
+  font-size: 23px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  gap: 22px;
+  font-weight: 700;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tag {
+  color: #68e58c;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 58px);
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #68e58c;
+}
+
+.hero p, .container > p {
+  color: #a5b5a9;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.flame {
+  font-size: 150px;
+  filter: drop-shadow(0 0 40px #42b86b);
+}
+
+.primary {
+  background: #39b968;
+  color: #06140a;
+  border: 0;
+  border-radius: 12px;
+  padding: 15px 24px;
+  font-weight: 800;
+}
+
+.primary:hover {
+  background: #67e88e;
+  transform: translateY(-2px);
+}
+
+.secondary, .back {
+  background: #18251c;
+  color: white;
+  border: 1px solid #304c38;
+  border-radius: 10px;
+  padding: 13px 20px;
+  margin-top: 20px;
+}
+
+.container, .lesson {
+  width: min(1000px, 90%);
+  margin: 60px auto;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #1d2a21;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress div {
+  height: 100%;
+  background: #4bd779;
+  transition: width 0.3s;
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.level {
+  min-height: 125px;
+  background: #132018;
+  border: 1px solid #2a4030;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.level span {
+  font-size: 25px;
+}
+
+.level small {
+  color: #a3b7a8;
+}
+
+.level.unlocked:hover {
+  border-color: #54db7d;
+  transform: translateY(-3px);
+}
+
+.level.locked {
+  opacity: 0.4;
+}
+
+.lesson {
+  max-width: 650px;
+}
+
+.question-card {
+  background: #132018;
+  padding: 30px;
+  border: 1px solid #2d4533;
+  border-radius: 18px;
+  margin-top: 25px;
+}
+
+.question-card h2 {
+  margin-bottom: 25px;
+}
+
+.answers {
+  display: grid;
+  gap: 12px;
+}
+
+.answer {
+  background: #1b2a20;
+  border: 1px solid #344b39;
+  border-radius: 10px;
+  color: white;
+  padding: 16px;
+  text-align: left;
+}
+
+.answer:hover, .answer.selected {
+  border-color: #58dc80;
+  background: #25442d;
+}
+
+.message {
+  margin: 20px 0;
+  color: #70e995;
+}
+
+.full {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.complete {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.big-flame {
+  font-size: 100px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.shop-card {
+  padding: 25px;
+  background: #132018;
+  border: 1px solid #304a37;
+  border-radius: 15px;
+}
+
+.shop-card p, .shop-card h3 {
+  margin: 18px 0;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  background: #132018;
+  color: white;
+  border: 1px solid #304a37;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px 0;
+  font-family: inherit;
+  resize: vertical;
+}
+
+footer {
+  background: #101913;
+  border-top: 1px solid #24382a;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 70px;
+}
+
+footer button {
+  background: transparent;
+  border: 0;
+  color: #b8c9bd;
+  padding: 12px;
+}
+
+footer button:hover {
+  color: #68e58c;
+}
+
+footer p {
+  color: #718276;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .stats {
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 65px 7%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flame {
+    font-size: 90px;
+  }
+
+  .question-card {
+    padding: 20px;
+  }
+}
