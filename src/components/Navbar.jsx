@@ -1,5 +1,4 @@
 // src/components/Navbar.jsx
-import React from "react";
 
 export default function Navbar({ data, setPage }) {
   return (
